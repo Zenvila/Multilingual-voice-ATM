@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual ATM - Voice Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Fixed Help Button -->
+    <button id="helpBtn" class="help-button" aria-label="Get Help">
+        <span class="help-icon">?</span>
+        <span class="help-text">HELP</span>
+    </button>
+
+    <!-- Language Selection Modal -->
+    <div id="languageModal" class="modal">
+        <div class="modal-content">
+            <h2>Select Language / زبان منتخب کریں</h2>
+            <div class="language-grid">
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="ur">اردو (Urdu)</button>
+                <button class="lang-btn" data-lang="pa">پنجابی (Pakistani Punjabi)</button>
+                <button class="lang-btn" data-lang="ps">پښتو (Pashto)</button>
+                <button class="lang-btn" data-lang="sd">سنڌي (Sindhi)</button>
+                <button class="lang-btn" data-lang="ar">العربية (Arabic)</button>
+            </div>
+            <button id="closeModal" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Main ATM Interface -->
+    <div class="atm-container">
+        <div class="atm-header">
+            <h1>Welcome to ATM</h1>
+            <div id="statusMessage" class="status-message"></div>
+        </div>
+
+        <!-- Login Section -->
+        <div id="loginSection" class="section">
+            <h2>Enter Your Account Details</h2>
+            <div class="input-group">
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" id="accountNumber" placeholder="Enter account number" maxlength="10">
+            </div>
+            <div class="input-group">
+                <label for="pin">PIN:</label>
+                <input type="password" id="pin" placeholder="Enter PIN" maxlength="4">
+            </div>
+            <button id="loginBtn" class="action-btn primary">Login</button>
+        </div>
+
+        <!-- ATM Actions Section (Hidden initially) -->
+        <div id="actionsSection" class="section" style="display: none;">
+            <h2>Select an Action</h2>
+            <div class="action-buttons">
+                <button id="withdrawBtn" class="action-btn large">Withdraw Cash</button>
+                <button id="balanceBtn" class="action-btn large">Check Balance</button>
+                <button id="logoutBtn" class="action-btn secondary">Logout</button>
+            </div>
+        </div>
+
+        <!-- Withdraw Section (Hidden initially) -->
+        <div id="withdrawSection" class="section" style="display: none;">
+            <h2>Withdraw Cash</h2>
+            <div class="input-group">
+                <label for="amount">Enter Amount (PKR):</label>
+                <input type="number" id="amount" placeholder="0.00" min="1" step="0.01">
+            </div>
+            <div class="quick-amounts">
+                <button class="quick-amount-btn" data-amount="1000">Rs. 1,000</button>
+                <button class="quick-amount-btn" data-amount="5000">Rs. 5,000</button>
+                <button class="quick-amount-btn" data-amount="10000">Rs. 10,000</button>
+                <button class="quick-amount-btn" data-amount="20000">Rs. 20,000</button>
+            </div>
+            <div class="button-group">
+                <button id="confirmWithdrawBtn" class="action-btn primary">Confirm Withdrawal</button>
+                <button id="cancelWithdrawBtn" class="action-btn secondary">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Balance Display Section (Hidden initially) -->
+        <div id="balanceSection" class="section" style="display: none;">
+            <h2>Account Balance</h2>
+            <div class="balance-display">
+                <div class="balance-amount" id="balanceAmount">Rs. 0.00</div>
+            </div>
+            <button id="backToActionsBtn" class="action-btn primary">Back to Menu</button>
+        </div>
+
+        <!-- Voice Assistant Status -->
+        <div id="voiceAssistantStatus" class="voice-status" style="display: none;">
+            <div class="voice-indicator">
+                <span class="pulse"></span>
+                <span id="voiceStatusText">Voice Assistant Active</span>
+            </div>
+            <div id="voiceInstruction" class="voice-instruction"></div>
+            <button id="stopVoiceBtn" class="action-btn secondary small">Stop Voice</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
