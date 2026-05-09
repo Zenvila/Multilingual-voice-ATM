@@ -159,7 +159,7 @@ This creates an immutable chain of transactions that can be verified for integri
 [![Flask](https://img.shields.io/badge/Flask-3.0-green)](https://flask.palletsprojects.com)
 
 > 🌐 **Live Demo:** https://multilingual-voice-atm-production.up.railway.app  
-> 📄 **Research Paper:** Coming Soon
+> 📄 **Research Paper:** https://doi.org/10.13140/RG.2.2.32966.43841
 
 
 ## License
