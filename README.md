@@ -153,7 +153,7 @@ This creates an immutable chain of transactions that can be verified for integri
 - Voice assistant uses browser TTS (can be upgraded to OpenAI API)
 
 # Multilingual Voice Assistant ATM - MVP
-
+[![Research Paper](https://img.shields.io/badge/Preprint-ResearchGate-blue)](https://doi.org/10.13140/RG.2.2.32966.43841)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-brightgreen)](https://multilingual-voice-atm-production.up.railway.app)
 [![Python](https://img.shields.io/badge/Python-3.13-blue)](https://python.org)
 [![Flask](https://img.shields.io/badge/Flask-3.0-green)](https://flask.palletsprojects.com)
