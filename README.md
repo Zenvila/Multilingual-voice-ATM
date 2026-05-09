@@ -152,6 +152,16 @@ This creates an immutable chain of transactions that can be verified for integri
 - Database is SQLite (can be upgraded to PostgreSQL/MySQL)
 - Voice assistant uses browser TTS (can be upgraded to OpenAI API)
 
+# Multilingual Voice Assistant ATM - MVP
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-brightgreen)](https://multilingual-voice-atm-production.up.railway.app)
+[![Python](https://img.shields.io/badge/Python-3.13-blue)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-3.0-green)](https://flask.palletsprojects.com)
+
+> 🌐 **Live Demo:** https://multilingual-voice-atm-production.up.railway.app  
+> 📄 **Research Paper:** Coming Soon
+
+
 ## License
 
 This project is for educational and demonstration purposes.
