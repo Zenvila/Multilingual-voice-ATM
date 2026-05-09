@@ -273,7 +273,8 @@ def logout():
     session.clear()
     return jsonify({'success': True, 'message': 'Logged out'})
 
+# Initialize database on startup (works on Render too)
+db.initialize_sample_data()
+
 if __name__ == '__main__':
-    # Initialize database with sample data
-    db.initialize_sample_data()
     app.run(debug=True, host='0.0.0.0', port=5000)
