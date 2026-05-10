@@ -1,6 +1,18 @@
 # Multilingual Voice Assistant ATM - MVP
 
-A Flask-based MVP that simulates a Multilingual Voice Assistant for ATM users, designed with simplicity and accessibility in mind.
+[![Research Paper](https://img.shields.io/badge/Preprint-ResearchGate-blue)](https://doi.org/10.13140/RG.2.2.14223.14243)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-brightgreen)](https://multilingual-voice-atm-production.up.railway.app)
+[![Python](https://img.shields.io/badge/Python-3.13-blue)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-3.0-green)](https://flask.palletsprojects.com)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+> 🌐 **Live Demo:** https://multilingual-voice-atm-production.up.railway.app
+> 
+> 📄 **Research Paper:** https://doi.org/10.13140/RG.2.2.14223.14243
+
+A Flask-based MVP that simulates a Multilingual Voice Assistant for ATM users, designed with simplicity and accessibility in mind. Built to solve a real problem — out of Pakistan's 241.5 million people, around **165 million can't understand English**, creating a daily barrier to basic banking.
+
+---
 
 ## Features
 
@@ -11,6 +23,8 @@ A Flask-based MVP that simulates a Multilingual Voice Assistant for ATM users, d
 - **Mock Banking Operations**: Withdraw cash, check balance
 - **Secure Architecture**: Separated UI, Logic, and Data layers
 - **Blockchain-style Transaction Logging**: Hashed transaction records with linked chains
+
+---
 
 ## Project Structure
 
@@ -35,9 +49,15 @@ Multilingual_ATM/
 └── README.md
 ```
 
+---
+
 ## Installation
 
-1. **Clone or download the project**
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Zenvila/Multilingual-voice-ATM.git
+   cd Multilingual-voice-ATM
+   ```
 
 2. **Install dependencies**:
    ```bash
@@ -60,12 +80,16 @@ Multilingual_ATM/
 5. **Access the application**:
    Open your browser and navigate to `http://localhost:5000`
 
+---
+
 ## Sample Accounts
 
-The application comes with pre-configured sample accounts for testing:
+| Account Number | PIN  | Balance        |
+|----------------|------|----------------|
+| 1234567890     | 1234 | Rs. 100,000.00 |
+| 0987654321     | 5678 | Rs. 50,000.00  |
 
-- **Account**: `1234567890`, **PIN**: `1234`, **Balance**: Rs. 100,000.00
-- **Account**: `0987654321`, **PIN**: `5678`, **Balance**: Rs. 50,000.00
+---
 
 ## Usage
 
@@ -79,6 +103,8 @@ The application comes with pre-configured sample accounts for testing:
    - Select your preferred language
    - The voice assistant will guide you through each step
    - Instructions are provided both as text and voice
+
+---
 
 ## Architecture
 
@@ -108,9 +134,11 @@ The application comes with pre-configured sample accounts for testing:
 - Transaction logging with linked hashes
 - Separated concerns (UI doesn't handle sensitive data directly)
 
+---
+
 ## Voice Assistant
 
-The voice assistant uses **OpenAI API** to generate dynamic, context-aware instructions in the selected language. It uses OpenAI's GPT model to create natural, step-by-step guidance and OpenAI's TTS (Text-to-Speech) API for high-quality voice output.
+The voice assistant uses **OpenAI API** to generate dynamic, context-aware instructions in the selected language.
 
 **Features:**
 - **OpenAI GPT Integration**: Generates instructions dynamically based on context and step
@@ -124,6 +152,8 @@ The voice assistant uses **OpenAI API** to generate dynamic, context-aware instr
 3. Instructions are spoken using OpenAI TTS
 4. User receives guidance for each step of the ATM operation
 
+---
+
 ## Transaction Logging
 
 Each transaction is logged with:
@@ -136,32 +166,39 @@ Each transaction is logged with:
 
 This creates an immutable chain of transactions that can be verified for integrity.
 
+---
+
 ## Future Enhancements
 
 - Integration with OpenAI Realtime Voice API for more natural conversations
 - Real ATM hardware integration
-- Additional languages
+- Additional languages (Balochi, Brahui)
 - Biometric authentication
 - Receipt printing simulation
 - Transaction history viewing
+- Formal user study with target demographic
+
+---
+
+## Research
+
+This project is accompanied by a published research paper:
+
+**VoiceATM: A Multilingual Voice Assistant System for Bridging Language Barriers in Banking Accessibility**  
+Haris Arain — ResearchGate Preprint, May 2026  
+DOI: [10.13140/RG.2.2.14223.14243](https://doi.org/10.13140/RG.2.2.14223.14243)
+
+---
 
 ## Notes
 
 - This is an MVP/demo application for demonstration purposes
 - PIN hashing is simplified (use proper encryption in production)
 - Database is SQLite (can be upgraded to PostgreSQL/MySQL)
-- Voice assistant uses browser TTS (can be upgraded to OpenAI API)
+- Voice assistant uses browser TTS fallback when OpenAI key is not configured
 
-# Multilingual Voice Assistant ATM - MVP
-[![Research Paper](https://doi.org/10.13140/RG.2.2.14223.14243)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-brightgreen)](https://multilingual-voice-atm-production.up.railway.app)
-[![Python](https://img.shields.io/badge/Python-3.13-blue)](https://python.org)
-[![Flask](https://img.shields.io/badge/Flask-3.0-green)](https://flask.palletsprojects.com)
-
-> 🌐 **Live Demo:** https://multilingual-voice-atm-production.up.railway.app  
-> 📄 **Research Paper:** https://doi.org/10.13140/RG.2.2.32966.43841
-
+---
 
 ## License
 
-This project is for educational and demonstration purposes.
+This project is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — you are free to share and adapt with attribution.
